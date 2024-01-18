@@ -44,6 +44,8 @@ about:
   summary: Analysis of body movement
   license: BSD-3-Clause
   license_file: LICENSE
+  doc_url: https://movement.neuroinformatics.dev/
+  dev_url: https://github.com/neuroinformatics-unit/movement
 
 extra:
   recipe-maintainers:
