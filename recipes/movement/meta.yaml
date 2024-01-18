@@ -1,0 +1,50 @@
+{% set name = "movement" %}
+{% set version = "0.0.12" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/movement-{{ version }}.tar.gz
+  sha256: 064c26f81baa58da13ed4296d2b40d5497a972fd10618d83c498735a02c27f78
+
+build:
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 0
+
+requirements:
+  host:
+    - python >=3.9.0
+    - setuptools >=45
+    - wheel
+    - setuptools-scm >=6.2
+    - pip
+  run:
+    - python >=3.9.0
+    - numpy
+    - pandas
+    - h5py
+    - attrs
+    - pooch
+    - tqdm
+    - sleap-io
+    - xarray
+
+test:
+  imports:
+    - movement
+  commands:
+    - pip check
+  requires:
+    - pip
+
+about:
+  summary: Analysis of body movement
+  license: BSD-3-Clause
+  license_file: LICENSE
+
+extra:
+  recipe-maintainers:
+    - niksirbi
