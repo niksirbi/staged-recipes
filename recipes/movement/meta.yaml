@@ -41,7 +41,7 @@ test:
     - pip
 
 about:
-  summary: Analysis of body movement
+  summary: 'Python tools for analysing body movements across space and time'
   license: BSD-3-Clause
   license_file: LICENSE
   doc_url: https://movement.neuroinformatics.dev/
