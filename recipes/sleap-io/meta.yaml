@@ -30,6 +30,8 @@ requirements:
     - simplejson
     - imageio
     - imageio-ffmpeg
+    - ffmpeg <6.1.0
+    - opencv <4.9.0
     - av
 
 test:
